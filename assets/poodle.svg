@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img">
+  <title>Poodle</title>
+  <rect width="200" height="200" rx="24" fill="#f2edfa" />
+  <ellipse cx="100" cy="180" rx="48" ry="9" fill="#3b2f5c" opacity="0.08" />
+
+  <defs>
+    <clipPath id="poodle-body"><ellipse cx="100" cy="146" rx="38" ry="32" /></clipPath>
+  </defs>
+
+  <!-- pom-pom tail -->
+  <path d="M134 142 q22 4 24 -14" fill="none" stroke="#8b7cb2" stroke-width="10" stroke-linecap="round" />
+  <circle cx="160" cy="124" r="11" fill="#f7f2ff" stroke="#8b7cb2" stroke-width="3" />
+
+  <!-- slim body and lighter belly -->
+  <ellipse cx="100" cy="146" rx="38" ry="32" fill="#f7f2ff" stroke="#8b7cb2" stroke-width="3" />
+  <g clip-path="url(#poodle-body)">
+    <ellipse cx="100" cy="164" rx="24" ry="20" fill="#e6dcf7" />
+  </g>
+
+  <!-- slim legs -->
+  <rect x="78" y="150" width="13" height="34" rx="6.5" fill="#f7f2ff" stroke="#8b7cb2" stroke-width="3" />
+  <rect x="109" y="150" width="13" height="34" rx="6.5" fill="#f7f2ff" stroke="#8b7cb2" stroke-width="3" />
+
+  <!-- round ear puffs -->
+  <circle cx="64" cy="92" r="14" fill="#e6dcf7" stroke="#8b7cb2" stroke-width="3" />
+  <circle cx="136" cy="92" r="14" fill="#e6dcf7" stroke="#8b7cb2" stroke-width="3" />
+
+  <!-- head -->
+  <circle cx="100" cy="80" r="30" fill="#f7f2ff" stroke="#8b7cb2" stroke-width="3" />
+
+  <!-- topknot: three curls -->
+  <circle cx="100" cy="46" r="14" fill="#e6dcf7" stroke="#8b7cb2" stroke-width="3" />
+  <circle cx="86" cy="54" r="10" fill="#e6dcf7" stroke="#8b7cb2" stroke-width="3" />
+  <circle cx="114" cy="54" r="10" fill="#e6dcf7" stroke="#8b7cb2" stroke-width="3" />
+
+  <!-- narrow muzzle and nose -->
+  <ellipse cx="100" cy="94" rx="14" ry="12" fill="#efe7fb" />
+  <ellipse cx="100" cy="87" rx="6.5" ry="5" fill="#3b2f5c" />
+  <path d="M100 92 v4" stroke="#3b2f5c" stroke-width="2.2" stroke-linecap="round" />
+  <path d="M100 96 q-5 5 -9 1" fill="none" stroke="#3b2f5c" stroke-width="2.2" stroke-linecap="round" />
+  <path d="M100 96 q5 5 9 1" fill="none" stroke="#3b2f5c" stroke-width="2.2" stroke-linecap="round" />
+
+  <!-- eyes -->
+  <circle cx="88" cy="76" r="4.6" fill="#3b2f5c" />
+  <circle cx="112" cy="76" r="4.6" fill="#3b2f5c" />
+  <circle cx="89.4" cy="74.4" r="1.5" fill="#ffffff" />
+  <circle cx="113.4" cy="74.4" r="1.5" fill="#ffffff" />
+
+  <!-- collar -->
+  <path d="M74 108 q26 12 52 0" fill="none" stroke="#7e57c2" stroke-width="7" stroke-linecap="round" />
+</svg>

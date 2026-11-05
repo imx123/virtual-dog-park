@@ -1,0 +1,175 @@
+/* ------------------------------------------------------------------
+   Virtual Dog Park — stylesheet
+   Plain CSS, no frameworks. Sections run from tokens to small screens.
+   ------------------------------------------------------------------ */
+
+/* 1. Design tokens ------------------------------------------------ */
+:root {
+  --paper: #fdfaf3;
+  --card: #ffffff;
+  --ink: #2f2a26;
+  --muted: #6f675e;
+  --line: #e8dfd1;
+  --accent: #b5651d;
+  --accent-dark: #8f4d13;
+  --radius: 16px;
+  --shadow: 0 2px 8px rgba(48, 38, 28, 0.08);
+  --page-width: 60rem;
+}
+
+/* 2. Base --------------------------------------------------------- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0 1rem 3rem;
+  font-family: system-ui, -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--ink);
+  background-color: var(--paper);
+  background-image: radial-gradient(circle at 12% 6%, #f4e7d3 0, transparent 45%),
+    radial-gradient(circle at 88% 0%, #e9eef0 0, transparent 40%);
+  background-repeat: no-repeat;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0 0 0.5rem;
+  line-height: 1.25;
+  text-wrap: balance;
+}
+
+p {
+  margin: 0 0 0.75rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* 3. Page layout -------------------------------------------------- */
+.site-header,
+main,
+.site-footer {
+  max-width: var(--page-width);
+  margin-inline: auto;
+}
+
+.site-header {
+  padding: 3rem 0 1.5rem;
+}
+
+.site-header h1 {
+  font-size: clamp(1.9rem, 6vw, 2.9rem);
+  letter-spacing: -0.02em;
+}
+
+.site-intro {
+  max-width: 46ch;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+main {
+  display: grid;
+  gap: 2.5rem;
+}
+
+.section-title {
+  font-size: clamp(1.35rem, 3.2vw, 1.7rem);
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 3rem;
+  height: 3px;
+  margin-top: 0.45rem;
+  border-radius: 2px;
+  background: var(--accent);
+}
+
+/* 4. Breed cards -------------------------------------------------- */
+.breed-grid {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+  margin-top: 1.25rem;
+}
+
+.breed-card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.1rem;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.breed-illustration {
+  display: block;
+  width: 100%;
+  max-width: 12rem;
+  margin: 0 auto 0.85rem;
+  border-radius: 20px;
+}
+
+.breed-name {
+  font-size: 1.2rem;
+}
+
+.breed-facts {
+  display: grid;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.breed-facts strong {
+  color: var(--ink);
+}
+
+/* 5. Footer ------------------------------------------------------- */
+.site-footer {
+  margin-top: 3rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+/* 6. Small screens ------------------------------------------------ */
+@media (max-width: 30rem) {
+  .site-header {
+    padding-top: 2rem;
+  }
+
+  .breed-illustration {
+    max-width: 10rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
