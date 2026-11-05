@@ -173,3 +173,180 @@ main {
     animation: none !important;
   }
 }
+
+/* 7. Panels and the adoption form --------------------------------- */
+/* The `hidden` attribute must win over display:grid / display:flex. */
+[hidden] {
+  display: none !important;
+}
+
+.panel {
+  margin-top: 1.25rem;
+  padding: 1.25rem;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.adopt-form {
+  display: grid;
+  gap: 1rem;
+  justify-items: start;
+}
+
+.field {
+  display: grid;
+  gap: 0.35rem;
+  width: 100%;
+  max-width: 24rem;
+}
+
+.field label {
+  font-weight: 600;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 0.6rem 0.7rem;
+  font: inherit;
+  color: inherit;
+  background: #fffdf9;
+  border: 1px solid #d8ccb9;
+  border-radius: 10px;
+}
+
+input::placeholder {
+  color: #a99e90;
+}
+
+.hint {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.button {
+  padding: 0.6rem 1.15rem;
+  font: inherit;
+  font-weight: 600;
+  color: var(--ink);
+  background: #fffdf9;
+  border: 1px solid #d8ccb9;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: #f7efe2;
+}
+
+.button-primary {
+  color: #ffffff;
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.button-primary:hover {
+  background: var(--accent-dark);
+}
+
+/* 8. Feedback messages -------------------------------------------- */
+.message {
+  margin: 0.85rem 0 0;
+  font-size: 0.92rem;
+  color: var(--accent-dark);
+}
+
+.message:empty {
+  display: none;
+}
+
+/* 9. The adopted dog ---------------------------------------------- */
+.pet-panel {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: minmax(0, 11rem) minmax(0, 1fr);
+  align-items: start;
+}
+
+.pet-figure {
+  text-align: center;
+}
+
+.pet-illustration {
+  display: block;
+  width: 9rem;
+  margin: 0 auto 0.5rem;
+}
+
+.pet-caption {
+  margin: 0;
+  font-size: 0.78rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.pet-name {
+  margin-bottom: 0.1rem;
+  font-size: 1.5rem;
+  overflow-wrap: anywhere;
+}
+
+.pet-breed {
+  margin-bottom: 0.75rem;
+  color: var(--muted);
+}
+
+.stats {
+  display: grid;
+  gap: 0.6rem;
+  grid-template-columns: repeat(auto-fit, minmax(7rem, 1fr));
+  margin: 1rem 0;
+}
+
+.stat {
+  padding: 0.6rem 0.75rem;
+  background: #fbf5ea;
+  border-radius: 12px;
+}
+
+.stat dt {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.stat dd {
+  margin: 0.1rem 0 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+@media (max-width: 34rem) {
+  .pet-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .pet-figure {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    text-align: left;
+  }
+
+  .pet-illustration {
+    width: 6.5rem;
+    margin: 0;
+  }
+}

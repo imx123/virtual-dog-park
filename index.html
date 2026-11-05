@@ -68,6 +68,82 @@
           </article>
         </div>
       </section>
+
+      <section class="section" id="my-dog" aria-labelledby="my-dog-title">
+        <h2 class="section-title" id="my-dog-title">My Virtual Dog</h2>
+
+        <!-- Shown while no dog has been adopted -->
+        <div class="panel" id="adopt-panel">
+          <form class="adopt-form" id="adopt-form" novalidate>
+            <div class="field">
+              <label for="breed-select">Breed</label>
+              <select id="breed-select" name="breed">
+                <option value="beagle">Beagle</option>
+                <option value="golden">Golden Retriever</option>
+                <option value="poodle">Poodle</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="dog-name">Dog name</label>
+              <input
+                id="dog-name"
+                name="dogName"
+                type="text"
+                maxlength="20"
+                autocomplete="off"
+                placeholder="e.g. Buddy"
+              />
+              <p class="hint">Up to 20 characters. Spaces inside the name are fine.</p>
+            </div>
+
+            <button class="button button-primary" type="submit">Adopt</button>
+          </form>
+          <p class="message" id="adopt-message" role="status" aria-live="polite"></p>
+        </div>
+
+        <!-- Shown after a dog is adopted -->
+        <div class="panel pet-panel" id="pet-panel" hidden>
+          <div class="pet-figure">
+            <img
+              class="pet-illustration"
+              id="pet-illustration"
+              src="assets/beagle.svg"
+              alt="Illustration of your adopted dog."
+              width="200"
+              height="200"
+            />
+            <p class="pet-caption">Your dog</p>
+          </div>
+
+          <div class="pet-details">
+            <h3 class="pet-name" id="pet-name">Buddy</h3>
+            <p class="pet-breed" id="pet-breed">Beagle</p>
+
+            <dl class="stats">
+              <div class="stat">
+                <dt>Day</dt>
+                <dd id="stat-day">1</dd>
+              </div>
+              <div class="stat">
+                <dt>Growth stage</dt>
+                <dd id="stat-stage">Puppy</dd>
+              </div>
+              <div class="stat">
+                <dt>Happiness</dt>
+                <dd id="stat-happiness">50 / 100</dd>
+              </div>
+            </dl>
+
+            <div class="actions">
+              <button class="button" type="button" id="feed-button">Feed</button>
+              <button class="button" type="button" id="play-button">Play</button>
+            </div>
+
+            <p class="message" id="care-message" role="status" aria-live="polite"></p>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="site-footer">
