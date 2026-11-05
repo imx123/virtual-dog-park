@@ -135,12 +135,39 @@
               </div>
             </dl>
 
+            <div class="growth">
+              <div
+                class="growth-track"
+                id="growth-bar"
+                role="progressbar"
+                aria-label="Growth"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                aria-valuenow="33"
+                aria-valuetext="Puppy"
+              >
+                <div class="growth-fill" id="growth-fill"></div>
+              </div>
+              <p class="growth-labels">
+                <span>Puppy</span>
+                <span>Young Dog</span>
+                <span>Adult Dog</span>
+              </p>
+            </div>
+
             <div class="actions">
               <button class="button" type="button" id="feed-button">Feed</button>
               <button class="button" type="button" id="play-button">Play</button>
+              <button class="button" type="button" id="next-day-button">Next Day</button>
             </div>
 
             <p class="message" id="care-message" role="status" aria-live="polite"></p>
+
+            <div class="actions actions-secondary">
+              <button class="button button-quiet" type="button" id="start-over-button">
+                Start Over
+              </button>
+            </div>
           </div>
         </div>
       </section>

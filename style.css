@@ -350,3 +350,63 @@ input::placeholder {
     margin: 0;
   }
 }
+
+/* 10. Growth bar --------------------------------------------------- */
+.growth {
+  margin: 1.1rem 0 1.25rem;
+}
+
+.growth-track {
+  height: 0.8rem;
+  overflow: hidden;
+  background: #efe6d8;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+}
+
+.growth-fill {
+  width: 33%;
+  height: 100%;
+  background: linear-gradient(90deg, #e0a552, var(--accent));
+  border-radius: inherit;
+  transition: width 240ms ease;
+}
+
+.growth-labels {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.4rem 0 0;
+  font-size: 0.76rem;
+  color: var(--muted);
+}
+
+/* The illustration grows as well, but the stage is always written out in
+   text too, so it is never communicated by size alone. */
+.pet-illustration {
+  transition: width 240ms ease;
+}
+
+.pet-panel[data-stage="Young Dog"] .pet-illustration {
+  width: 11rem;
+}
+
+.pet-panel[data-stage="Adult Dog"] .pet-illustration {
+  width: 13rem;
+}
+
+/* 11. Start Over ---------------------------------------------------- */
+.actions-secondary {
+  margin-top: 0.5rem;
+}
+
+.button-quiet {
+  color: var(--muted);
+  background: transparent;
+  border-color: var(--line);
+}
+
+.button-quiet:hover {
+  color: #8a2a1c;
+  background: #fbeeea;
+  border-color: #c9a49c;
+}
